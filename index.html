@@ -32,36 +32,64 @@
         });
         </script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script language="JavaScript">
+    $(document).bind("contextmenu",function(e) {
+     e.preventDefault();
+    });
+    $(document).keydown(function(e){
+        if(e.ctrlKey && (e.which === 83)){
+           e.preventDefault();
+           return false;
+        }
+    });
+    </script>
+    <script>
+        /* To Disable Inspect Element */
+        $(document).bind("contextmenu",function(e) {
+         e.preventDefault();
+        });
+        
+        $(document).keydown(function(e){
+            if(e.which === 123){
+               return false;
+            }
+        });
+        </script>
+
 <script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-</script>
-
-
-   
+    document.onkeydown = function(e) {
+    if(event.keyCode == 123) {
+    return false;
+    }
+    if(e.ctrlKey && e.keyCode == 'E'.charCodeAt(0)){
+    return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+    return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+    return false;
+    }
+    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+    return false;
+    }
+    if(e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)){
+    return false;
+    }
+    if(e.ctrlKey && e.keyCode == 'H'.charCodeAt(0)){
+    return false;
+    }
+    if(e.ctrlKey && e.keyCode == 'A'.charCodeAt(0)){
+    return false;
+    }
+    if(e.ctrlKey && e.keyCode == 'F'.charCodeAt(0)){
+    return false;
+    }
+    if(e.ctrlKey && e.keyCode == 'E'.charCodeAt(0)){
+    return false;
+    }
+    }
+    </script>
         <style>
             html,body {
 margin:0;
@@ -197,12 +225,6 @@ right: 1vh;
 
    }
    
-   .bg{
-    background-image: url('bg-2.jpeg'); 
-    background-size: cover;
-    background-attachment: fixed;
-    height: auto;
-   }
 
 @media only screen and (min-width: 823px){
    .active{
@@ -210,18 +232,8 @@ right: 1vh;
 
    }
 }
-
   
 @media only screen and (max-width: 823px) {
-
-        .bg{
-     background-image: url('bg-2 copy.jpeg'); 
-    background-size: cover;
-    background-attachment: fixed;
-    height: auto;
-    width: 100%;
-        }
-
        .img-1{
            width: 60%;
            height: 25% ;
@@ -263,38 +275,8 @@ right: 1vh;
    .active{
        border-bottom: #0275d8 2px;
    }
-
-   .menu1::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  background-color: white;
-  color: transparent;
-  width: 0%;
-  content: '.';
-  height: 3px;
-  transition: 0.5s;}
-
-  .menu2::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  background-color: #0275d8;
-  color: transparent;
-  width: 0%;
-  content: '.';
-  height: 3px;
-  transition: 0.5s;
-}
-   
        
    }
-
-
 
    .menu1 {
   font-size: 25;
@@ -461,7 +443,7 @@ z-index: 999999;
         
         <div class='row' id="home">
             
-            <div class='col-sm-12 bg' >
+            <div class='col-sm-12' style="background-image: url('bg-2.jpeg'); background-size: cover; background-attachment: fixed; height: auto;" >
                 <div class="container">
                     
                     <h1 class="display-2" style="color: white; padding-top: 40%; text-align: center; font-size: 5vw;">My name is Anmol Goyal</h1>
