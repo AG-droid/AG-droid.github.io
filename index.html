@@ -263,8 +263,38 @@ right: 1vh;
    .active{
        border-bottom: #0275d8 2px;
    }
+
+   .menu1::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: white;
+  color: transparent;
+  width: 0%;
+  content: '.';
+  height: 3px;
+  transition: 0.5s;}
+
+  .menu2::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #0275d8;
+  color: transparent;
+  width: 0%;
+  content: '.';
+  height: 3px;
+  transition: 0.5s;
+}
+   
        
    }
+
+
 
    .menu1 {
   font-size: 25;
