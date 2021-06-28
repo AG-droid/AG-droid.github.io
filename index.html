@@ -263,7 +263,9 @@ right: 1vh;
 }
   
 @media only screen and (max-width: 823px) {
+
     
+
     .bg { 
   /* The image used */
   background-image: url("bg-2.jpeg");
@@ -344,6 +346,35 @@ right: 1vh;
    .active{
        border-bottom: #0275d8 2px;
    }
+
+   .menu1::after {
+  position: absolute;
+  top: 60;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: white;
+  color: transparent;
+  width: 0%;
+  content: '.';
+  height: 3px;
+  transition: 0.5s;
+}
+
+.menu2::after {
+  position: absolute;
+  top: 60;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #0275d8;
+  color: transparent;
+  width: 0%;
+  content: '.';
+  height: 3px;
+  transition: 0.5s;
+}
+
        
    }
 
