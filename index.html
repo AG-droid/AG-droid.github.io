@@ -20,7 +20,11 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-
+    <script type="text/javascript">
+        var onloadCallback = function() {
+          alert("grecaptcha is ready!");
+        };
+      </script>
     <script>
         
 
@@ -721,7 +725,7 @@ z-index: 999999;
                                 <input type="text" class="form-control mb-4 mr-sm-2" placeholder=" Subject " id="Subject" name="data[Subject]" required>
                                <pre> <textarea class="form-control mb-4 mr-sm-2" id="Message" rows="3" cols="0.5" placeholder="Message" name="data[Message]" required></textarea></pre>
                                <div class="g-recaptcha mb-5 mr-sm-2" data-sitekey="6LcmWxYcAAAAAFxwtA102gQDVLb6qva4mWC7-7Zd"></div>
-                                <button class="btn btn-primary round" type="submit" >Submit</button>
+                                <button class="btn btn-primary round" type="submit" disabled='disabled' id="button1">Submit</button>
 
                             </div>
                         </form>
@@ -793,6 +797,9 @@ z-index: 999999;
         </div>
     
     <script>
+         function enableBtn(){
+   document.getElementById("button1").disabled = false;
+ }
          $(window).on("scroll", function() {
             if($(window).scrollTop()) {
                 $('nav').removeClass('navbar-dark');
