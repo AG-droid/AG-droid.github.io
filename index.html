@@ -920,13 +920,15 @@ $(window).scroll(function(){
               response => response.json()
           ).then((html) => {
             // you can put any JS code here
+
             document.getElementById('Name').value='';
             document.getElementById('Email').value='';
             document.getElementById('Subject').value='';
             document.getElementById('Message').value='';
+            $("#myModal").modal();
             document.getElementById('Captcha').reset();
             
-            $("#myModal").modal();
+           
           });
         });
 
